@@ -56,27 +56,28 @@ a reference with BWA-MEM, provide basic summary stats on the sequence data, and 
 
 **Software dependencies for this pipeline**
 
-HTStream
-BWA-MEM
-Sambamba
-qualimap
-python 3 (definitely works with v. 3.10)
-BCFtools
+	[HTStream](https://s4hts.github.io/HTStream/)
+	[BWA-MEM](https://bio-bwa.sourceforge.net)
+	[Sambamba](https://lomereiter.github.io/sambamba/)
+	[qualimap](http://qualimap.conesalab.org)
+	python 3 (definitely works with v. 3.10)
+	[BCFtools](https://samtools.github.io/bcftools/bcftools.html)
 
 python dependencies:
-os
-sys
-argparse
-glob
-re
-json
-numpy
-pandas
-matplotlib
-seaborn
-multiprocessing
-pyfaidx
-Bio
+
+	os
+	sys
+	argparse
+	glob
+	re
+	json
+	numpy
+	pandas
+	matplotlib
+	seaborn
+	multiprocessing
+	pyfaidx
+	Bio
 
 If installing on a Linux machine the CCGPpipeline.yml can be used to install all
 dependencies with the following command (assuming you have miniconda or anaconda installed):
