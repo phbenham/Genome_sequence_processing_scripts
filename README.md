@@ -6,7 +6,7 @@ data from WGS or exome capture type projects.
 There are four main steps to this pipeline that will clean reads using HTStream, map cleaned reads to
 a reference with BWA-MEM, provide basic summary stats on the sequence data, and perform genotype calls with bcftools 
 
-#(1) CleanReads_HTSstream
+**(1) CleanReads_HTSstream**
 
 	basic usage:
 	python3 CleanReads_HTSstream.py -i directory/rawreads/ -o cleanedreads/out/ -a adapters.txt	
@@ -16,7 +16,7 @@ a reference with BWA-MEM, provide basic summary stats on the sequence data, and 
 	-o path to output directory where cleanedreads and json formatted log files will be stored
 	-a file with sequence adapters to be trimmed. file adapters.txt has Illumina adapter sequences.	
 		
-#(2) MapToReference
+**(2) MapToReference**
 
 	basic usage:
 	python3 MapToReference.py -i cleanedreads/out/ -o mapped_reads_out/ -f refgenome.fna -t 12
@@ -27,7 +27,7 @@ a reference with BWA-MEM, provide basic summary stats on the sequence data, and 
 	-f reference genome to map reads to
 	-t number of threads 
 		
-#(3) sequence_evaluation_script
+**(3) sequence_evaluation_script**
 
 	basic usage:
 	python3 sequence_evaluation_script.py -j cleanedreads/out/stats_log_files/ -i mapped_reads_out/ -s sample-data.csv -o evaluation_stats_out/ -n MyEvaluationMetrics
@@ -43,7 +43,7 @@ a reference with BWA-MEM, provide basic summary stats on the sequence data, and 
 	-b optional bed file for estimating region specific coverage
 	-e 1 yes or 0 no, if 1 will calculate specificity and sensitivity for capture datasets [default 0]
 
-#(4) BCFtools_parallel_mpileup
+**(4) BCFtools_parallel_mpileup**
 
 	basic usage:
 	python3 BCFtools_parallel_mpileup.py -b mapped_reads_out/ -f refgenome.fna -o outputvcf/ -t 12
@@ -54,7 +54,7 @@ a reference with BWA-MEM, provide basic summary stats on the sequence data, and 
 	-o pathway to output dir
 	-t number of threads
 
-#Software dependencies for this pipeline:
+**Software dependencies for this pipeline**
 
 HTStream
 BWA-MEM
