@@ -1,4 +1,4 @@
-# Genome_sequence_processing_scripts
+# Genome_sequence_processing_scripts (last update: 22 September 2023)
 
 This directory contains a series of python scripts for processing raw sequencing
 data from WGS or exome capture type projects.
