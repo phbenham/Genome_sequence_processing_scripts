@@ -7,6 +7,7 @@ There are four main steps to this pipeline that will clean reads using HTStream,
 a reference with BWA-MEM, provide basic summary stats on the sequence data, and perform genotype calls with bcftools 
 
 (1) CleanReads_HTSstream
+
 	basic usage:
 	python3 CleanReads_HTSstream.py -i directory/rawreads/ -o cleanedreads/out/ -a adapters.txt	
 		
@@ -16,6 +17,7 @@ a reference with BWA-MEM, provide basic summary stats on the sequence data, and 
 	-a file with sequence adapters to be trimmed. file adapters.txt has Illumina adapter sequences.	
 		
 (2) MapToReference
+
 	basic usage:
 	python3 MapToReference.py -i cleanedreads/out/ -o mapped_reads_out/ -f refgenome.fna -t 12
 		
@@ -26,6 +28,7 @@ a reference with BWA-MEM, provide basic summary stats on the sequence data, and 
 	-t number of threads 
 		
 (3) sequence_evaluation_script
+
 	basic usage:
 	python3 sequence_evaluation_script.py -j cleanedreads/out/stats_log_files/ -i mapped_reads_out/ -s sample-data.csv -o evaluation_stats_out/ -n MyEvaluationMetrics
 		
